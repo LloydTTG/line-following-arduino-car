@@ -1,9 +1,8 @@
-/* #include <Servo.h>
+#include <Servo.h>
 
 Servo myServo;
 
 int servoPin = 8
-*/
 
 int ena = 5; //right speed control
 int in1 = 6; //right forward
@@ -16,14 +15,12 @@ int in4 = 11; //left backward
 int outLeft = 12; // input pin of left ir sensor
 int outRight = 13; // input pin of right ir sensor
 
-/*
 int trigPin = 3; // 
 int echoPin = 4;
 
 
 float duration;
 float distanceCM;
-*/
 
 void setup() {
   pinMode(ena, OUTPUT);
