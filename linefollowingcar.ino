@@ -63,7 +63,7 @@ void loop() {
 
 
   duration = pulseIn(echoPin, HIGH);
-  distanceCM = (duration*0.034)/2
+  distanceCM = (duration*0.034)/2;
 
   if (distanceCM <=15){
     myServo.write(150); 
@@ -72,7 +72,7 @@ void loop() {
       myServo.write(30); 
       delay(1000); // checking right
       if (distanceCM<=20){
-        exit(0) // die if obstacles
+        exit(0); // die if obstacles
       }
       else if (distanceCM >=20){ // turn right if nothing on the right
         move(3);
