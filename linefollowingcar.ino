@@ -2,7 +2,7 @@
 
 Servo myServo;
 
-int servoPin = 8
+int servoPin = 8;
 
 int ena = 5; //right speed control
 int in1 = 6; //right forward
