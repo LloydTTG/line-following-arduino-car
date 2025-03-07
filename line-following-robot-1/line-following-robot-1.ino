@@ -5,6 +5,9 @@ int in2 = 7; //right backward
 int motorAspeed = 140;
 int motorBspeed = 107;
 
+int motorAturnspeed = 70
+int motorBturnspeed = 54
+
 int enb = 9; //left speed control
 int in3 = 10; //left forward
 int in4 = 11; //left backward
@@ -44,8 +47,8 @@ void loop() {
   }
   //only left detects white, turn right
   else if (digitalRead(outLeft)==LOW && digitalRead(outRight)==HIGH){
-    analogWrite(enb, 70);
-    analogWrite(ena, 54);
+    analogWrite(enb, motorBturnspeed);
+    analogWrite(ena, motorAturnspeed);
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
     digitalWrite(in3, LOW);
@@ -53,8 +56,8 @@ void loop() {
 
   //only right detects white, turn left
   else if (digitalRead(outLeft)==HIGH && digitalRead(outRight)==LOW){
-    analogWrite(ena, 70);
-    analogWrite(enb, 54);
+    analogWrite(ena, motorAturnspeed);
+    analogWrite(enb, motorBturnspeed);
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
     digitalWrite(in3, HIGH);
