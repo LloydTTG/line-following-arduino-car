@@ -52,7 +52,8 @@ void loop() {
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
     digitalWrite(in3, LOW);
-    digitalWrite(in4, HIGH);  }
+    digitalWrite(in4, HIGH);  
+  }
 
   //only right detects white, turn left
   else if (digitalRead(outLeft)==HIGH && digitalRead(outRight)==LOW){
